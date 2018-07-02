@@ -1,0 +1,265 @@
+
+#drops {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+
+#drops .drop-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+}
+
+#drops .drop {
+  width: calc(25% - 20px);
+  margin: 0 10px 30px 10px;
+  background-color: #19191c;
+  position: relative;
+}
+
+#drops .drop .tickets {
+  position: absolute;
+  top: 6px;
+  left: -25px;
+  width: 112px;
+  height: 44px;
+  background-image: url('../../img/ticket-small.png');
+  text-align: center;
+  line-height: 44px;
+  font-weight: bold;
+  font-size: 17px;
+  transform: rotate(-45deg);
+  z-index: 1;
+  cursor: pointer;
+}
+
+#drops .drop .img {
+  display: inline-block;
+  width: 100%;
+  max-height: 200px;
+  height: 200px;
+  overflow: hidden;
+  background-color: white;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.drop .status {
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.drop .question-gate {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding:10px 20px;
+  color: white;
+  border-top: 1px solid #46464c;
+  border-bottom: 1px solid #46464c;
+  margin: 10px 0;
+}
+
+.drop .winner {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #673f00;
+  background: rgb(255,194,0); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(255,194,0,1) 0%, rgba(255,152,0,1) 50%, rgba(255,126,21,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255,194,0,1) 0%,rgba(255,152,0,1) 50%,rgba(255,126,21,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255,194,0,1) 0%,rgba(255,152,0,1) 50%,rgba(255,126,21,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc200', endColorstr='#ff7e15',GradientType=1 ); /* IE6-9 */
+  small {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.drop .status.status-active {
+  background-color: #00d0b4;
+}
+.drop .status.status-passive {
+  background-color: #c3c7c9;
+}
+
+#drops .drop .img:hover .edit-drop {
+  display: block;
+}
+
+#drops .drop .img .edit-drop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0,0,0,.7);
+  cursor: pointer;
+  color: white;
+
+  i.icon-note {
+    color: white;
+    font-size: 25px;
+    line-height: 200px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
+
+}
+
+#drops .drop .img img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+#drops .drops-info {
+  color: #dedede;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 30px 0;
+}
+
+#drops .drop .datas h4 {
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+  min-height: 45px;
+  padding: 0 10px;
+}
+
+#drops .drop .price {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+#drops .drop .price span.ttl {
+  color: white;
+  display: inline-block;
+  font-family: 'exo';
+  font-size: 16px;
+  line-height: 27px;
+  margin-right: 10px;
+  position: relative;
+  top: -5px;
+}
+
+#drops .drop .price .coin-small {
+  display: inline-block;
+  width: 20px;
+  height: 23px;
+  background-image: url('../../img/gamer-coin-small.png');
+}
+
+#drops .drop .price span.count {
+  font-family: 'exo';
+  font-size: 27px;
+  color: #ce7f00;
+  line-height: 27px;
+}
+
+#drops .drop .actions {
+  padding: 20px 20px 25px 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+#drops .drop .actions .btn-outline.btn-rounded:hover {
+  background-color: #f24444;
+  color: white;
+}
+
+#drops .drop .datas ul.actions {
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+}
+#drops .drop .datas ul.actions li {
+  display: inline-block;
+  float: left;
+}
+
+#drops .drop span.btn-rounded.btn-outline.btn-action {
+  display: inline-block;
+  font-weight: bold;
+  border: 2px solid #f24444;
+  padding: 5px 10px;
+  color: #f24444;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.tickets-container {
+  display: inline-block;
+  width: 100%;
+
+  .ticket {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: white;
+    color: #000;
+    font-size: 16px;
+    margin: 5px;
+  }
+}
+
+.fancy-form-group.answer-line input {
+  width: calc(100% - 270px);
+}
+
+.answer-line {
+  position: relative;
+
+  .set_correct {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    line-height: 40px;
+    height: 40px;
+    width:170px;
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+
+    span {
+      color: white;
+      text-decoration: underline;
+    }
+
+    i.icon-check {
+      color: #00d0b4;
+      font-size: 25px;
+      position: absolute;
+      left: -35px;
+      top: 8px;
+    }
+
+    i.icon-check + span {
+      color: #00d0b4;
+      text-decoration: none;
+    }
+
+  }
+
+
+}
